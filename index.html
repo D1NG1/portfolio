@@ -5,209 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuetong (Dennys) Ding | AI Software Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2563eb; /* Blue */
-            --dark: #0f172a;    /* Navy */
-            --light: #f8fafc;   /* White-ish */
-            --text: #334155;    /* Dark Gray */
-            --bg-card: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-        body { background-color: var(--light); color: var(--text); line-height: 1.6; }
-
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--dark); text-decoration: none; }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
-        .btn { background: var(--primary); color: white; padding: 0.5rem 1.5rem; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
-        .btn:hover { background: #1d4ed8; }
-
-        /* Hero Section */
-        .hero { padding: 8rem 5%; text-align: center; max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-size: 3.5rem; color: var(--dark); margin-bottom: 1rem; }
-        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; }
-        .hero span { color: var(--primary); }
-
-        /* Skills Section */
-        .skills { padding: 4rem 5%; background: white; }
-        .section-title { text-align: center; font-size: 2rem; margin-bottom: 3rem; color: var(--dark); }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .skill-card { padding: 2rem; border-radius: 10px; background: var(--light); text-align: center; border: 1px solid #e2e8f0; }
-        .skill-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
-        .skill-card h3 { margin-bottom: 1rem; }
-
-        /* Featured Case Study (Lenovo) */
-        .case-study { padding: 6rem 5%; background: var(--dark); color: white; }
-        .case-container { display: flex; flex-wrap: wrap; gap: 4rem; max-width: 1200px; margin: 0 auto; align-items: center; }
-        .case-text { flex: 1; min-width: 300px; }
-        .case-stats { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; min-width: 300px; }
-
-        .stat-box { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; text-align: center; backdrop-filter: blur(5px); }
-        .stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: #60a5fa; }
-        .stat-label { font-size: 0.9rem; opacity: 0.9; }
-
-        .tag { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; margin-right: 0.5rem; margin-bottom: 1rem; }
-
-        /* Projects Section */
-        .projects { padding: 6rem 5%; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .project-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .project-card:hover { transform: translateY(-5px); }
-        .project-content { padding: 2rem; }
-        .project-tech { font-size: 0.85rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
-        .project-title { font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark); }
-        .project-desc { color: #64748b; margin-bottom: 1.5rem; }
-        .project-link { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
-        .project-link:hover { color: var(--primary); }
-
-        /* Contact/Footer */
-        footer { text-align: center; padding: 4rem 5%; background: white; border-top: 1px solid #e2e8f0; }
-        .social-links { margin-bottom: 2rem; }
-        .social-links a { color: var(--text); font-size: 1.5rem; margin: 0 1rem; transition: color 0.3s; }
-        .social-links a:hover { color: var(--primary); }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-    <a href="#" class="logo">Dennys Ding.</a>
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="mailto:yuetong.ding@mail.utoronto.ca" class="btn">Contact Me</a>
-    </div>
-</nav>
-
-<section class="hero">
-    <h1>Building Efficient <br><span>AI Systems</span> & Software</h1>
-    <p>Hi, I'm Yuetong (Dennys) Ding. A Computer Science Specialist at U of T and AI Developer building optimized deep learning pipelines and robust backend architectures.</p>
-    <div style="margin-top: 2rem;">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="https://github.com/D1NG1" target="_blank" style="margin-left: 1rem; color: var(--text); text-decoration: none; font-weight: 600;">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-    </div>
-</section>
-
-<section id="about" class="skills">
-    <h2 class="section-title">Technical Expertise</h2>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <i class="fas fa-brain"></i>
-            <h3>AI & Machine Learning</h3>
-            <p>PyTorch, PaddleOCR, ONNX Runtime, OpenCV, CUDA, YOLOv11</p>
+    <nav>
+        <a href="#" class="logo">Dennys Ding.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="mailto:yuetong.ding@mail.utoronto.ca" class="btn">Contact Me</a>
         </div>
-        <div class="skill-card">
-            <i class="fas fa-server"></i>
-            <h3>Backend & API</h3>
-            <p>FastAPI, Flask, Java, SQL, Docker, Postman</p>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-code"></i>
-            <h3>Languages</h3>
-            <p>Python, Java, C#, R, JavaScript, Bash</p>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<section id="experience" class="case-study">
-    <h2 class="section-title" style="color: white; margin-bottom: 1rem;">Featured Work: Lenovo AI Optimization</h2>
-    <p style="text-align: center; margin-bottom: 4rem; opacity: 0.8;">Transforming a 10GB raw model into a 1GB high-speed production tool.</p>
-
-    <div class="case-container">
-        <div class="case-text">
-            <span class="tag">PaddleOCR</span>
-            <span class="tag">ONNX Runtime</span>
-            <span class="tag">FastAPI</span>
-            <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">The Challenge</h3>
-            <p style="margin-bottom: 1.5rem; opacity: 0.9;">
-                Lenovo needed to process 5,000+ gaming images for app state detection. The original process relied on heavy models and manual verification, which was slow and resource-intensive.
-            </p>
-            <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">The Solution</h3>
-            <p style="opacity: 0.9;">
-                I engineered an automated testing pipeline using <strong>PaddleOCR and YOLOv11</strong>. I fine-tuned the model for app-launch detection and exported it using <strong>ONNX Runtime</strong> to maximize inference speed. Finally, I packaged the entire Python environment into a standalone Windows executable.
-            </p>
+    <section class="hero">
+        <h1>Building Efficient <br><span>AI Systems</span> & Software</h1>
+        <p>Hi, I'm Yuetong (Dennys) Ding. A Computer Science Specialist at U of T and AI Developer building optimized deep learning pipelines and robust backend architectures.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="https://github.com/D1NG1" target="_blank" style="color: var(--text); text-decoration: none; font-weight: 600;">
+                <i class="fab fa-github"></i> GitHub
+            </a>
         </div>
-        <div class="case-stats">
-            <div class="stat-box">
-                <span class="stat-number">300%</span>
-                <span class="stat-label">Faster Detection Speed</span>
+    </section>
+
+    <section id="about" class="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Languages</h3>
+                <p>Python, Java, C#, JavaScript, HTML/CSS, R, SQL, Bash, PHP</p>
             </div>
-            <div class="stat-box">
-                <span class="stat-number">-90%</span>
-                <span class="stat-label">File Size (10GB &rarr; 1GB)</span>
+            <div class="skill-card">
+                <i class="fas fa-cube"></i>
+                <h3>Frameworks & Databases</h3>
+                <p>FastAPI, Flask, PyTorch, Django, PostgreSQL, MongoDB, SQLite</p>
             </div>
-            <div class="stat-box">
-                <span class="stat-number">99%</span>
-                <span class="stat-label">Model Accuracy</span>
-            </div>
-            <div class="stat-box">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Automated Verification</span>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <h3>Tools & DevOps</h3>
+                <p>Docker, Git, CUDA, OpenCV, Postman, ONNX Runtime, AWS, Linux</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="projects" class="projects">
-    <h2 class="section-title">Software Projects</h2>
-    <div class="project-grid">
+    <section id="experience" class="timeline-section">
+        <h2 class="section-title">Journey & Experience</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Computer Science Specialist</h3>
+                        <span class="timeline-date">Sep 2024 - Present</span>
+                    </div>
+                    <p class="timeline-company">University of Toronto, St George</p>
+                    <p class="timeline-description">
+                        Pursuing a Bachelor of Science in Computer Science with a focus on AI and systems design. Completing coursework in advanced algorithms, data structures, and machine learning fundamentals.
+                    </p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Java</span>
+                        <span class="timeline-tag">Python</span>
+                        <span class="timeline-tag">Data Structures</span>
+                        <span class="timeline-tag">Algorithms</span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="project-card">
-            <div class="project-content">
-                <div class="project-tech">Java • Swing • Clean Architecture</div>
-                <h3 class="project-title">Trivia Quiz Application</h3>
-                <p class="project-desc">
-                    A robust desktop application following SOLID principles. Implemented core quiz logic, API integration, and unit testing within a collaborative 6-person team environment.
-                </p>
-                <a href="https://github.com/klaeirn/team-project" target="_blank" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+            <div class="timeline-item">
+                <div class="timeline-marker active">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>AI Software Developer</h3>
+                        <span class="timeline-date">Jun 2025 - Aug 2025</span>
+                    </div>
+                    <p class="timeline-company">Lenovo, Tianjin, China</p>
+                    <p class="timeline-description">
+                        Engineered an automated testing pipeline using PaddleOCR and YOLOv11, reducing model size from 10GB to 1GB while maintaining 99% accuracy. Implemented FastAPI backend and packaged system into a production-ready Windows executable.
+                    </p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">PaddleOCR</span>
+                        <span class="timeline-tag">YOLOv11</span>
+                        <span class="timeline-tag">FastAPI</span>
+                        <span class="timeline-tag">ONNX Runtime</span>
+                        <span class="timeline-tag">OpenCV</span>
+                    </div>
+                    <div class="timeline-stats">
+                        <div class="stat">
+                            <span class="stat-value">300%</span>
+                            <span class="stat-name">Faster Speed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">-90%</span>
+                            <span class="stat-name">Size Reduction</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">99%</span>
+                            <span class="stat-name">Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker coming-soon">
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <div class="timeline-content coming-soon-content">
+                    <div class="timeline-header">
+                        <h3>More Coming Soon</h3>
+                        <span class="timeline-date">Next Chapter</span>
+                    </div>
+                    <p class="timeline-description">
+                        Exciting opportunities ahead! Building on my experience with AI systems and backend development.
+                    </p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="project-card">
-            <div class="project-content">
-                <div class="project-tech">Python • Data Structures</div>
-                <h3 class="project-title">Chess Recommendation Engine</h3>
-                <p class="project-desc">
-                    Analyzed 10,000+ games to calculate win rates. Used tree-graph structures to visualize move sequences and built an interactive tool for real-time move recommendations.
-                </p>
-                <a href="https://github.com/D1NG1/Chess-move-recommendation" target="_blank" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+    <section id="projects" class="projects">
+        <h2 class="section-title">Software Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-tech">Java • Swing • Clean Architecture</div>
+                    <h3 class="project-title">Trivia Quiz Application</h3>
+                    <p class="project-desc">
+                        A robust desktop application following SOLID principles. Implemented core quiz logic, API integration, and unit testing within a collaborative 6-person team environment.
+                    </p>
+                    <a href="https://github.com/klaeirn/team-project" target="_blank" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="project-content">
-                <div class="project-tech">Python • OOP • JSON</div>
-                <h3 class="project-title">Text Adventure Engine</h3>
-                <p class="project-desc">
-                    An expandable game engine designed with Object-Oriented patterns. Features a dynamic map system loaded via JSON, allowing for infinite scalability of game content.
-                </p>
-                <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-tech">Python • Data Structures</div>
+                    <h3 class="project-title">Chess Recommendation Engine</h3>
+                    <p class="project-desc">
+                        Analyzed 10,000+ games to calculate win rates. Used tree-graph structures to visualize move sequences and built an interactive tool for real-time move recommendations.
+                    </p>
+                    <a href="https://github.com/D1NG1/Chess-move-recommendation" target="_blank" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-tech">Python • OOP • JSON</div>
+                    <h3 class="project-title">Text Adventure Engine</h3>
+                    <p class="project-desc">
+                        An expandable game engine designed with Object-Oriented patterns. Features a dynamic map system loaded via JSON, allowing for infinite scalability of game content.
+                    </p>
+                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-    </div>
-</section>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/D1NG1" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/dennys-ding" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:yuetong.ding@mail.utoronto.ca"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Yuetong (Dennys) Ding. Built with code.</p>
+    </footer>
 
-<footer>
-    <div class="social-links">
-        <a href="https://github.com/D1NG1" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/dennys-ding" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:yuetong.ding@mail.utoronto.ca"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p>&copy; 2025 Yuetong (Dennys) Ding. Built with code.</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
