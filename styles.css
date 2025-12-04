@@ -147,18 +147,32 @@ nav {
     font-weight: 700;
 }
 
-.hero-buttons {
+.hero-contact {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-    margin-top: 2rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
-.hero-buttons a {
+.contact-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(168, 213, 255, 0.1);
+    color: #a8d5ff;
+    text-decoration: none;
+    border: 2px solid #a8d5ff;
+    border-radius: 50px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    background: #a8d5ff;
+    color: var(--primary);
+    transform: translateY(-2px);
 }
 
 /* ============ SKILLS SECTION ============ */
@@ -595,34 +609,6 @@ footer {
     backdrop-filter: blur(10px);
 }
 
-.social-links {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.social-links a {
-    color: var(--light);
-    font-size: 1.5rem;
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: rgba(168, 213, 255, 0.1);
-    border: 1px solid rgba(168, 213, 255, 0.2);
-}
-
-.social-links a:hover {
-    color: #ffffff;
-    background: rgba(168, 213, 255, 0.25);
-    transform: translateY(-3px);
-    border-color: rgba(168, 213, 255, 0.4);
-}
-
 footer p {
     color: #c7e0f4;
     font-size: 0.95rem;
@@ -698,16 +684,6 @@ footer p {
 
     .timeline-content {
         padding: 20px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-buttons a {
-        width: 100%;
-        justify-content: center;
     }
 }
 

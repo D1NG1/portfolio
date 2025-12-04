@@ -111,16 +111,6 @@ function initInteractions() {
         });
     });
 
-    // Social links ripple effect
-    document.querySelectorAll('.social-links a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (link.href.includes('mailto')) {
-                e.preventDefault();
-                copyToClipboard(link.href.replace('mailto:', ''));
-            }
-        });
-    });
-
     // Add ripple effect to buttons
     document.querySelectorAll('.btn, .project-link').forEach(element => {
         element.addEventListener('click', createRipple);
@@ -129,19 +119,7 @@ function initInteractions() {
 
 // ============ SMOOTH SCROLL ============
 function initSmoothScroll() {
-    // Add smooth scroll to hero buttons
-    document.querySelectorAll('.hero-buttons a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        });
-    });
+    // Smooth scroll functionality
 }
 
 // ============ UTILITY FUNCTIONS ============
