@@ -577,6 +577,13 @@ nav {
     font-weight: 700;
 }
 
+/* Keep project title text and demo icon on one line */
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .project-desc {
     color: var(--text-light);
     margin-bottom: 1.5rem;
@@ -597,6 +604,14 @@ nav {
 .project-link:hover {
     color: var(--accent);
     transform: translateX(5px);
+}
+
+/* Group project links on one line and add spacing between them */
+.project-links {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 /* ============ FOOTER ============ */
